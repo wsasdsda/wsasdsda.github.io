@@ -668,18 +668,30 @@ body * {
   font-weight: 400 !important;
 }
 
-/* 目录字体改成蓝色 */
+/* 目录字体：蓝色 + 加粗 */
 .section-nav a,
 .section-nav a:visited,
 .section-nav a * {
-  color: #0000ff !important;
+  color: #0066cc !important;
+  font-weight: 700 !important;
 }
 
-/* 目录悬停颜色 */
+/* 目录悬停效果 */
 .section-nav a:hover,
 .section-nav a:hover *,
 .section-nav a:focus,
 .section-nav a:focus * {
   color: #004c99 !important;
   text-decoration: underline;
+}
+
+/* 每一个小节标题变蓝 */
+.section-heading h3,
+.section-heading h3 * {
+  color: #0066cc !important;
+}
+
+/* 小节编号也变蓝，例如 01、02、03 */
+.section-heading span {
+  color: #0066cc !important;
 }
