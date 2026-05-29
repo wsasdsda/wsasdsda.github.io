@@ -651,7 +651,7 @@ body * {
 .paper-links,
 .paper-links a,
 .publication-item .links-row a {
-  color: #003366 !important;
+  color: #0066cc !important;
   font-weight: 600 !important;
 }
 
@@ -659,7 +659,7 @@ body * {
 .paper-links:hover,
 .paper-links a:hover,
 .publication-item .links-row a:hover {
-  color: #003366 !important;
+  color: #0066cc !important;
   text-decoration: underline;
 }
 
