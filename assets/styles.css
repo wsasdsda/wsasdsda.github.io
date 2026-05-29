@@ -364,27 +364,32 @@ body::before {
   padding: 20px;
 }
 
-.publication-item h4 {
+.publication-item {
   position: relative;
-  padding-left: 20px;
-  line-height: 1.45;
+  padding: 20px 20px 20px 40px;
 }
 
-.publication-item h4::before {
-  position: absolute;
-  left: 0;
-  top: 0.05em;
+.publication-item::before {
   content: "•";
+  position: absolute;
+  left: 20px;
+  top: 21px;
   color: var(--accent-strong);
   font-size: 1.2rem;
   font-weight: 700;
   line-height: 1;
 }
 
+.publication-item h4,
 .publication-item .authors,
 .publication-item .venue,
 .publication-item .summary {
-  padding-left: 20px;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.publication-item h4 {
+  line-height: 1.45;
 }
 
 .paper-links {
