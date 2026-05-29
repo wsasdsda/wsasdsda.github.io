@@ -381,6 +381,12 @@ body::before {
   line-height: 1;
 }
 
+.publication-item .authors,
+.publication-item .venue,
+.publication-item .summary {
+  padding-left: 20px;
+}
+
 .paper-links {
   margin-left: 6px;
   font-family: "Source Sans 3", sans-serif;
