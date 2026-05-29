@@ -481,4 +481,61 @@ body::before {
     left: 0;
     top: 0.12em;
   }
+
+
+/* 去掉所有模块外边框和阴影 */
+.profile-card,
+.hero-panel,
+.content-section,
+.info-card,
+.publication-item {
+  border: none !important;
+  outline: none !important;
+}
+
+/* 如果你连卡片阴影也不想要，就保留这一行 */
+.info-card,
+.publication-item {
+  box-shadow: none !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+
+/* 每个模块标题下面的横线 */
+.section-heading {
+  padding-bottom: 10px !important;
+  border-bottom: 1px solid rgba(95, 129, 163, 0.22) !important;
+}
+
+/* 论文条目前面的点 */
+.publication-item {
+  position: relative !important;
+  padding-left: 24px !important;
+}
+
+.publication-item::before {
+  content: "•" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0.12em !important;
+  color: var(--accent-strong) !important;
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+}
+
+/* 防止 h4 自己又生成一个点 */
+.publication-item h4::before {
+  content: none !important;
+}
+
+/* 标题、作者、会议、链接统一对齐 */
+.publication-item h4,
+.publication-item .authors,
+.publication-item .venue,
+.publication-item .summary,
+.publication-item .links-row {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
 }
