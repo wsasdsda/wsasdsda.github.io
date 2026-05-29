@@ -106,14 +106,15 @@ body::before {
   text-transform: uppercase;
 }
 
-/* 照片样式：底部和“主要研究方向”一行对齐 */
+/* 照片样式：底部靠近“主要研究方向”这一行 */
 .avatar {
   grid-area: avatar;
   width: 118px;
   height: 148px;
   margin: 0 !important;
-  align-self: end !important;
+  align-self: start !important;
   justify-self: start !important;
+  transform: translateY(86px) !important;
   border: none !important;
   border-radius: 0;
   background: transparent !important;
@@ -569,7 +570,8 @@ img.avatar {
     width: 82px;
     height: 104px;
     margin: 0 !important;
-    align-self: end !important;
+    align-self: start !important;
+    transform: translateY(56px) !important;
     border-radius: 10px;
   }
 
@@ -713,7 +715,7 @@ body * {
   color: #0066cc !important;
 }
 
-/* 最终对齐保险：照片底部对齐到“主要研究方向”所在行 */
+/* 最终对齐保险：照片底部靠近“主要研究方向”这一行 */
 .profile-card {
   grid-template-areas:
     "badge badge nav"
@@ -728,8 +730,9 @@ body * {
 .avatar,
 img.avatar {
   margin: 0 !important;
-  align-self: end !important;
+  align-self: start !important;
   justify-self: start !important;
+  transform: translateY(86px) !important;
 }
 
 .profile-card h1 {
