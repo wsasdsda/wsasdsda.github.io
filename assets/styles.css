@@ -685,3 +685,31 @@ body * {
 .publication-item .authors b {
   font-weight: 400 !important;
 }
+
+/* 强制修改目录颜色 */
+.section-nav,
+.section-nav a,
+.section-nav li,
+.section-nav span,
+nav,
+nav a,
+nav li,
+nav span,
+.menu,
+.menu a,
+.toc,
+.toc a,
+.sidebar,
+.sidebar a {
+  color: var(--accent-strong) !important;
+}
+
+/* 目录 hover 效果 */
+.section-nav a:hover,
+nav a:hover,
+.menu a:hover,
+.toc a:hover,
+.sidebar a:hover {
+  color: var(--accent) !important;
+  text-decoration: underline;
+}
