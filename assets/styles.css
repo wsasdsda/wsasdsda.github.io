@@ -63,7 +63,7 @@ body::before {
   align-items: start;
 }
 
-/* 顶部个人目录模块 */
+/* 顶部个人信息模块：头像左，信息中间，目录右侧 */
 .profile-card {
   position: relative;
   width: 100%;
@@ -74,6 +74,19 @@ body::before {
   background: var(--paper);
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow);
+
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr) minmax(220px, 280px);
+  grid-template-areas:
+    "badge badge nav"
+    "avatar name nav"
+    "avatar title nav"
+    "avatar org nav"
+    "avatar bio nav"
+    "contact contact nav";
+  column-gap: 22px;
+  row-gap: 8px;
+  align-items: start;
 }
 
 .profile-card::after {
@@ -85,9 +98,12 @@ body::before {
   content: "";
   border-radius: 50%;
   background: radial-gradient(circle, rgba(46, 111, 163, 0.18), transparent 68%);
+  pointer-events: none;
 }
 
 .profile-badge {
+  grid-area: badge;
+  width: fit-content;
   display: inline-flex;
   padding: 6px 12px;
   border-radius: 999px;
@@ -100,9 +116,10 @@ body::before {
 }
 
 .avatar {
+  grid-area: avatar;
   width: 96px;
   height: 96px;
-  margin: 22px 0 18px;
+  margin: 8px 0 0;
   display: grid;
   place-items: center;
   border-radius: 24px;
@@ -125,6 +142,8 @@ body::before {
 }
 
 .profile-card h1 {
+  grid-area: name;
+  margin-top: 8px;
   font-size: 2rem;
   line-height: 1.15;
 }
@@ -136,14 +155,22 @@ body::before {
 }
 
 .title {
-  margin: 10px 0 6px;
+  grid-area: title;
+  margin: 0;
   font-size: 1.02rem;
   font-weight: 600;
 }
 
-.organization,
+.organization {
+  grid-area: org;
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
 .bio-snippet {
-  margin: 0 0 14px;
+  grid-area: bio;
+  margin: 0;
   font-size: 0.98rem;
   line-height: 1.65;
 }
@@ -155,7 +182,11 @@ body::before {
 }
 
 .contact-list {
-  margin-top: 18px;
+  grid-area: contact;
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
 }
 
 .contact-link {
@@ -212,14 +243,21 @@ body::before {
   text-decoration: underline;
 }
 
+/* 目录放在顶部模块右侧 */
 .section-nav {
-  margin-top: 26px;
-  padding-top: 20px;
-  border-top: 1px solid var(--line);
+  grid-area: nav;
+  position: relative;
+  z-index: 1;
+  margin-top: 0;
+  padding-top: 0;
+  padding-left: 20px;
+  border-top: none;
+  border-left: 1px solid var(--line);
+  align-self: stretch;
 }
 
 .section-nav a {
-  padding: 10px 12px;
+  padding: 9px 12px;
   border-radius: var(--radius-sm);
   transition:
     background-color 0.22s ease,
@@ -461,17 +499,35 @@ body::before {
   box-shadow: none;
 }
 
-/* 平板和手机端 */
+/* 平板端 */
 @media (max-width: 980px) {
   .page-shell {
     grid-template-columns: 1fr;
   }
 
   .profile-card {
-    position: relative;
+    grid-template-columns: 100px minmax(0, 1fr);
+    grid-template-areas:
+      "badge badge"
+      "avatar name"
+      "avatar title"
+      "avatar org"
+      "avatar bio"
+      "contact contact"
+      "nav nav";
+  }
+
+  .section-nav {
+    margin-top: 18px;
+    padding-top: 18px;
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid var(--line);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
+/* 手机端 */
 @media (max-width: 720px) {
   .page-shell {
     width: min(100% - 18px, 100%);
@@ -482,6 +538,27 @@ body::before {
   .profile-card {
     padding: 20px;
     border-radius: 20px;
+    grid-template-columns: 82px minmax(0, 1fr);
+    grid-template-areas:
+      "badge badge"
+      "avatar name"
+      "avatar title"
+      "avatar org"
+      "avatar bio"
+      "contact contact"
+      "nav nav";
+    column-gap: 16px;
+  }
+
+  .avatar {
+    width: 76px;
+    height: 76px;
+    border-radius: 20px;
+    font-size: 1.6rem;
+  }
+
+  .profile-card h1 {
+    font-size: 1.65rem;
   }
 
   .hero-panel,
@@ -503,6 +580,15 @@ body::before {
     flex-direction: column;
     gap: 6px;
     padding-bottom: 10px;
+  }
+
+  .section-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-list {
+    display: grid;
+    gap: 10px;
   }
 
   .publication-item {
@@ -531,7 +617,7 @@ body::before {
   backdrop-filter: none !important;
 }
 
-/* 最终保险覆盖：顶部个人目录模块保留白色卡片 */
+/* 最终保险覆盖：顶部个人信息模块保留白色卡片 */
 .profile-card {
   position: relative !important;
   border: 1px solid var(--line) !important;
