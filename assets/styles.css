@@ -65,7 +65,7 @@ body::before {
 
 /* 顶部个人目录模块 */
 .profile-card {
-  position: static;
+  position: relative;
   width: 100%;
   padding: 28px;
   border: 1px solid var(--line);
@@ -231,7 +231,7 @@ body::before {
   transform: translateX(4px);
 }
 
-/* 内容区整体排在顶部模块下方 */
+/* 内容区 */
 .content-column {
   display: grid;
   gap: 20px;
@@ -461,13 +461,14 @@ body::before {
   box-shadow: none;
 }
 
+/* 平板和手机端 */
 @media (max-width: 980px) {
   .page-shell {
     grid-template-columns: 1fr;
   }
 
   .profile-card {
-    position: static;
+    position: relative;
   }
 }
 
@@ -532,7 +533,7 @@ body::before {
 
 /* 最终保险覆盖：顶部个人目录模块保留白色卡片 */
 .profile-card {
-  position: static !important;
+  position: relative !important;
   border: 1px solid var(--line) !important;
   background: var(--paper) !important;
   backdrop-filter: blur(10px) !important;
