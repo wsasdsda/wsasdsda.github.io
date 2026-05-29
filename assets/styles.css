@@ -830,3 +830,21 @@ img.avatar {
   position: static !important;
   white-space: nowrap;
 }
+
+/* Research Interests：每一项前面加一个点 */
+#research .info-card {
+  position: relative;
+  padding-left: 22px !important;
+}
+
+#research .info-card::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  color: #000000;
+  font-size: 1.35rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
