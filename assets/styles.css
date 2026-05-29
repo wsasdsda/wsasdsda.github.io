@@ -481,4 +481,18 @@ body::before {
     left: 0;
     top: 0.12em;
   }
+  
+.profile-card,
+.hero-panel,
+.content-section,
+.info-card,
+.publication-item {
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.profile-card::after {
+  display: none;
+}
 }
