@@ -15,6 +15,34 @@
   --radius-sm: 12px;
 }
 
+@font-face {
+  font-family: "SiteSerif";
+  src: local("Cambria Math");
+  unicode-range: U+0030-0039;
+}
+
+@font-face {
+  font-family: "SiteSerif";
+  src: local("Times New Roman");
+  unicode-range:
+    U+0000-002F,
+    U+003A-00FF,
+    U+0100-024F,
+    U+1E00-1EFF,
+    U+2000-206F;
+}
+
+@font-face {
+  font-family: "SiteSerif";
+  src: local("SimSun"), local("Songti SC"), local("STSong");
+  unicode-range:
+    U+3000-303F,
+    U+3400-4DBF,
+    U+4E00-9FFF,
+    U+F900-FAFF,
+    U+FF00-FFEF;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -27,19 +55,11 @@ html {
 body {
   margin: 0;
   color: var(--text);
-  font-family: "Times New Roman", "SimSun", serif;
+  font-family: "SiteSerif", serif;
   background:
     radial-gradient(circle at top left, rgba(130, 180, 230, 0.18), transparent 24%),
     radial-gradient(circle at bottom right, rgba(170, 205, 240, 0.16), transparent 22%),
     linear-gradient(180deg, #edf6ff 0%, #f8fbff 48%, #f1f7ff 100%);
-}
-
-:lang(zh-CN) {
-  font-family: "SimSun", "Songti SC", "STSong", serif;
-}
-
-:lang(en) {
-  font-family: "Times New Roman", "Times", serif;
 }
 
 body::before {
@@ -113,7 +133,7 @@ body::before {
   background:
     linear-gradient(135deg, rgba(58, 129, 186, 0.95), rgba(31, 87, 132, 0.9));
   color: #f6fbff;
-  font-family: "Cambria Math", "Times New Roman", "SimSun", serif;
+  font-family: "SiteSerif", serif;
   font-size: 2rem;
   font-weight: 700;
   box-shadow: 0 14px 30px rgba(58, 111, 161, 0.24);
@@ -125,7 +145,7 @@ body::before {
 .info-card h4,
 .publication-item h4 {
   margin: 0;
-  font-family: "Times New Roman", "SimSun", serif;
+  font-family: "SiteSerif", serif;
 }
 
 .profile-card h1 {
@@ -205,7 +225,7 @@ body::before {
 .contact-panel a {
   color: var(--accent-strong);
   text-decoration: none;
-  font-family: "Times New Roman", "SimSun", serif;
+  font-family: "SiteSerif", serif;
 }
 
 .contact-list a:hover,
@@ -254,7 +274,7 @@ body::before {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-family: "Times New Roman", "SimSun", serif;
+  font-family: "SiteSerif", serif;
 }
 
 .hero-panel h2 {
@@ -268,7 +288,7 @@ body::before {
   color: var(--muted);
   font-size: 1.06rem;
   line-height: 1.82;
-  font-family: "Times New Roman", "SimSun", serif;
+  font-family: "SiteSerif", serif;
 }
 
 .hero-actions {
@@ -287,7 +307,7 @@ body::before {
   border-radius: 999px;
   text-decoration: none;
   font-weight: 700;
-  font-family: "Times New Roman", "SimSun", serif;
+  font-family: "SiteSerif", serif;
 }
 
 .button.primary {
@@ -318,7 +338,7 @@ body::before {
   font-size: 0.92rem;
   font-weight: 700;
   letter-spacing: 0.12em;
-  font-family: "Cambria Math", "Times New Roman", "SimSun", serif;
+  font-family: "SiteSerif", serif;
 }
 
 .section-heading h3 {
@@ -330,7 +350,7 @@ body::before {
   color: var(--muted);
   font-size: 1rem;
   line-height: 1.82;
-  font-family: "Times New Roman", "SimSun", serif;
+  font-family: "SiteSerif", serif;
 }
 
 .section-body p {
@@ -384,12 +404,7 @@ body::before {
 
 .authors {
   font-weight: 600;
-  font-family: "Times New Roman", "SimSun", serif;
-}
-
-.timeline-list strong,
-.venue {
-  font-family: "Cambria Math", "Times New Roman", "SimSun", serif;
+  font-family: "SiteSerif", serif;
 }
 
 .links-row {
