@@ -641,3 +641,34 @@ body,
 body * {
   color: #000000 !important;
 }
+
+/* 目录字体加粗 */
+.section-nav a {
+  font-weight: 700 !important;
+}
+
+/* 代表论文中的 [paper] 和 [code] 改成深蓝色 */
+.paper-links,
+.paper-links a,
+.publication-item .links-row a {
+  color: #003366 !important;
+  font-weight: 600 !important;
+}
+
+/* [paper] 和 [code] 悬停时仍保持深蓝色 */
+.paper-links:hover,
+.paper-links a:hover,
+.publication-item .links-row a:hover {
+  color: #003366 !important;
+  text-decoration: underline;
+}
+
+/* 作者姓名不加粗 */
+.authors,
+.publication-item .authors,
+.authors strong,
+.publication-item .authors strong,
+.authors b,
+.publication-item .authors b {
+  font-weight: 400 !important;
+}
