@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>个人主页 | Your Name</title>
+    <meta
+      name="description"
+      content="个人主页模板，适用于学术主页、研究者主页或专业个人展示网站。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="profile-card">
+        <div class="profile-badge">Academic Homepage</div>
+        <div class="avatar" aria-hidden="true">YN</div>
+        <h1>Your Name</h1>
+        <p class="title">副教授 / 研究员 / 软件工程师</p>
+        <p class="organization">
+          某某大学某某学院 / 某某研究院
+          <br />
+          City, Country
+        </p>
+        <p class="bio-snippet">
+          这里放你的简介摘要。建议 2 到 4 句，概括研究方向、工作身份、代表经历和当前关注的问题。
+        </p>
+
+        <div class="contact-list">
+          <a href="mailto:yourname@example.com">yourname@example.com</a>
+          <a href="https://scholar.google.com/" target="_blank" rel="noreferrer">Google Scholar</a>
+          <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+
+        <nav class="section-nav" aria-label="页面导航">
+          <a href="#about">简介</a>
+          <a href="#news">最新动态</a>
+          <a href="#research">研究方向</a>
+          <a href="#publications">代表论文</a>
+          <a href="#experience">经历</a>
+          <a href="#teaching">教学与服务</a>
+          <a href="#awards">荣誉奖项</a>
+          <a href="#contact">联系</a>
+        </nav>
+      </aside>
+
+      <main class="content-column">
+        <section class="hero-panel">
+          <p class="eyebrow">个人主页模板</p>
+          <h2>按照学术主页结构搭建的单页网站</h2>
+          <p class="hero-copy">
+            这个页面参考了你给出的主页信息架构，保留了“个人信息卡片 + 分区内容”的学术主页组织方式，
+            同时做了更现代的排版、配色和移动端适配。你只需要替换文本和链接，就可以直接部署到 GitHub Pages。
+          </p>
+          <div class="hero-actions">
+            <a href="#publications" class="button primary">查看代表成果</a>
+            <a href="#contact" class="button secondary">联系我</a>
+          </div>
+        </section>
+
+        <section id="about" class="content-section">
+          <div class="section-heading">
+            <span>01</span>
+            <h3>Biography / 简介</h3>
+          </div>
+          <div class="section-body">
+            <p>
+              我目前在某某单位从事研究与教学工作，主要研究方向包括人工智能、计算机视觉、多模态学习和数据驱动科学计算。
+              这里建议写完整个人介绍，包括学位背景、合作经历、主要研究兴趣、发表成果概况，以及当前开展的工作。
+            </p>
+            <p>
+              如果你希望这个主页更偏学术，可以继续强调论文、项目、学生培养和学术服务；如果你希望更偏工程或求职展示，
+              则可以把项目经验、技术栈、产品成果和开源贡献放在更靠前的位置。
+            </p>
+          </div>
+        </section>
+
+        <section id="news" class="content-section">
+          <div class="section-heading">
+            <span>02</span>
+            <h3>News / 最新动态</h3>
+          </div>
+          <div class="section-body">
+            <ul class="timeline-list">
+              <li>
+                <strong>2026.05</strong>
+                新主页上线，支持 GitHub Pages 直接部署。
+              </li>
+              <li>
+                <strong>2026.03</strong>
+                一篇关于多模态学习的论文被顶会接收。
+              </li>
+              <li>
+                <strong>2025.12</strong>
+                主持的新项目获批，主题聚焦智能系统与视觉理解。
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="research" class="content-section">
+          <div class="section-heading">
+            <span>03</span>
+            <h3>Research Interests / 研究方向</h3>
+          </div>
+          <div class="section-body grid-cards">
+            <article class="info-card">
+              <h4>Artificial Intelligence</h4>
+              <p>面向真实场景的智能建模、知识增强学习和可解释推理。</p>
+            </article>
+            <article class="info-card">
+              <h4>Computer Vision</h4>
+              <p>图像理解、目标识别、视频分析和视觉表示学习。</p>
+            </article>
+            <article class="info-card">
+              <h4>Multimodal Learning</h4>
+              <p>融合文本、图像、事件流或传感器信号的统一建模方法。</p>
+            </article>
+            <article class="info-card">
+              <h4>AI for Science</h4>
+              <p>以机器学习方法支持科学计算、实验分析和复杂系统建模。</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="publications" class="content-section">
+          <div class="section-heading">
+            <span>04</span>
+            <h3>Selected Publications / 代表论文</h3>
+          </div>
+          <div class="section-body publication-list">
+            <article class="publication-item">
+              <h4>Paper Title Goes Here</h4>
+              <p class="authors">
+                Your Name, Coauthor A, Coauthor B
+              </p>
+              <p class="venue">
+                <em>Conference / Journal Name</em>, 2026
+              </p>
+              <p class="summary">
+                一句话说明这篇工作的核心贡献，例如提出了什么方法、解决了什么问题、在哪些场景有效。
+              </p>
+              <div class="links-row">
+                <a href="#">Paper</a>
+                <a href="#">Code</a>
+                <a href="#">Project</a>
+              </div>
+            </article>
+
+            <article class="publication-item">
+              <h4>Another Representative Work</h4>
+              <p class="authors">
+                Your Name, Coauthor C, Coauthor D
+              </p>
+              <p class="venue">
+                <em>Journal Name</em>, 2025
+              </p>
+              <p class="summary">
+                这里可以继续列出你的代表成果，也可以替换成项目、专利、开源系统或比赛成绩。
+              </p>
+              <div class="links-row">
+                <a href="#">PDF</a>
+                <a href="#">BibTeX</a>
+              </div>
+            </article>
+
+            <article class="publication-item">
+              <h4>Project or System Showcase</h4>
+              <p class="authors">
+                Your Name, Team Members
+              </p>
+              <p class="venue">
+                <em>Demo / Open Source / Industry Collaboration</em>, 2024
+              </p>
+              <p class="summary">
+                如果你不是做纯学术，这一栏可以改造成“精选项目”，结构仍然适合展示成果。
+              </p>
+              <div class="links-row">
+                <a href="#">Demo</a>
+                <a href="#">Repository</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="experience" class="content-section">
+          <div class="section-heading">
+            <span>05</span>
+            <h3>Experience / 经历</h3>
+          </div>
+          <div class="section-body">
+            <ul class="timeline-list">
+              <li>
+                <strong>2024 - Present</strong>
+                某某大学某某学院，副教授 / 助理教授 / 研究员
+              </li>
+              <li>
+                <strong>2022 - 2024</strong>
+                某某实验室，博士后 / 高级工程师
+              </li>
+              <li>
+                <strong>2017 - 2022</strong>
+                某某大学，博士
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="teaching" class="content-section">
+          <div class="section-heading">
+            <span>06</span>
+            <h3>Teaching & Service / 教学与服务</h3>
+          </div>
+          <div class="section-body two-column-list">
+            <div>
+              <h4>课程</h4>
+              <ul>
+                <li>机器学习</li>
+                <li>深度学习</li>
+                <li>数据挖掘</li>
+                <li>人工智能导论</li>
+              </ul>
+            </div>
+            <div>
+              <h4>学术服务</h4>
+              <ul>
+                <li>Reviewer, IEEE TPAMI / TIP / TNNLS</li>
+                <li>Program Committee, AAAI / ACM MM</li>
+                <li>Area Chair, 某国际会议</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="awards" class="content-section">
+          <div class="section-heading">
+            <span>07</span>
+            <h3>Awards / 荣誉奖项</h3>
+          </div>
+          <div class="section-body">
+            <ul class="timeline-list">
+              <li><strong>2025</strong> 某某青年学者奖</li>
+              <li><strong>2024</strong> 某某优秀论文奖</li>
+              <li><strong>2023</strong> 某某人才计划入选</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="contact" class="content-section">
+          <div class="section-heading">
+            <span>08</span>
+            <h3>Contact / 联系方式</h3>
+          </div>
+          <div class="section-body contact-panel">
+            <p>
+              如果你希望交流合作、学术访问、学生招生或项目咨询，可以通过以下方式联系我。
+            </p>
+            <ul>
+              <li>Email: <a href="mailto:yourname@example.com">yourname@example.com</a></li>
+              <li>Office: Room 000, Building A, Your University</li>
+              <li>Address: City, Province / State, Country</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
